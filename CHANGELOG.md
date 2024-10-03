@@ -2,6 +2,10 @@
 
 # Version 1.0
 
+## v1.0.0-alpha.3 (Oct 2, 2024)
+
+- Fix for globe projection
+
 ## v1.0.0-alpha.2 (Oct 2, 2024)
 
 - Modernize build pipeline
