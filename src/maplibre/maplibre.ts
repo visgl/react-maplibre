@@ -239,7 +239,7 @@ export default class Maplibre {
     if (map.isStyleLoaded()) {
       map.fire('load');
     } else {
-      map.once('styledata', () => map.fire('load'));
+      map.once('style.load', () => map.fire('load'));
     }
 
     // Force reload
@@ -291,10 +291,7 @@ export default class Maplibre {
 
     // add listeners
     map.transformCameraUpdate = this._onCameraUpdate;
-    map.on('styledata', () => {
-      this._updateStyleComponents(this.props, {});
-    });
-    map.on('sourcedata', () => {
+    map.on('style.load', () => {
       this._updateStyleComponents(this.props, {});
     });
     for (const eventName in pointerEvents) {
@@ -435,15 +432,16 @@ export default class Maplibre {
   private _updateStyleComponents(nextProps: MaplibreProps, currProps: MaplibreProps): boolean {
     const map = this._map;
     let changed = false;
-    if (map.isStyleLoaded()) {
+    // We can safely manipulate map style once it's loaded
+    if (map.style._loaded) {
       if ('light' in nextProps && !deepEqual(nextProps.light, currProps.light)) {
         changed = true;
         map.setLight(nextProps.light);
       }
       if ('projection' in nextProps && !deepEqual(nextProps.projection, currProps.projection)) {
         changed = true;
-        // @ts-expect-error setProjection does not exist in v4
-        map.setProjection?.(nextProps.projection);
+        // @ts-ignore setProjection does not exist in v4
+        map.setProjection?.({type: nextProps.projection});
       }
       if ('sky' in nextProps && !deepEqual(nextProps.sky, currProps.sky)) {
         changed = true;
