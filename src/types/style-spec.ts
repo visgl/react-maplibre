@@ -18,7 +18,8 @@ import type {
   VectorSourceSpecification as VectorSourceRaw,
   RasterSourceSpecification as RasterSource,
   RasterDEMSourceSpecification as RasterDemSource,
-  CanvasSourceSpecification as CanvasSourceRaw
+  CanvasSourceSpecification as CanvasSourceRaw,
+  ProjectionSpecification
 } from 'maplibre-gl';
 
 // Layers
@@ -71,6 +72,7 @@ export type {
   StyleSpecification as MapStyle,
   LightSpecification as Light,
   TerrainSpecification as Terrain,
-  ProjectionSpecification as Projection,
   SkySpecification as Sky
 } from 'maplibre-gl';
+
+export type Projection = ProjectionSpecification | ProjectionSpecification['type'];

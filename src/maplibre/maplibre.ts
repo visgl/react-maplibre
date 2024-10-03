@@ -158,6 +158,12 @@ export default class Maplibre {
   private _internalUpdate: boolean = false;
   private _hoveredFeatures: MapGeoJSONFeature[] = null;
   private _propsedCameraUpdate: ViewState | null = null;
+  private _styleComponents: {
+    light?: Light;
+    sky?: Sky;
+    projection?: Projection;
+    terrain?: Terrain | null;
+  } = {};
 
   static savedMaps: Maplibre[] = [];
 
@@ -183,7 +189,7 @@ export default class Maplibre {
     const sizeChanged = this._updateSize(props);
     const viewStateChanged = this._updateViewState(props);
     this._updateStyle(props, oldProps);
-    this._updateStyleComponents(props, oldProps);
+    this._updateStyleComponents(props);
     this._updateHandlers(props, oldProps);
 
     // If 1) view state has changed to match props and
@@ -292,7 +298,19 @@ export default class Maplibre {
     // add listeners
     map.transformCameraUpdate = this._onCameraUpdate;
     map.on('style.load', () => {
-      this._updateStyleComponents(this.props, {});
+      // Map style has changed, this would have wiped out all settings from props
+      this._styleComponents = {
+        light: map.getLight(),
+        sky: map.getSky(),
+        // @ts-ignore getProjection() does not exist in v4
+        projection: map.getProjection?.(),
+        terrain: map.getTerrain()
+      };
+      this._updateStyleComponents(this.props);
+    });
+    map.on('sourcedata', () => {
+      // Some sources have loaded, we may need them to attach terrain
+      this._updateStyleComponents(this.props);
     });
     for (const eventName in pointerEvents) {
       map.on(eventName, this._onPointerEvent);
@@ -400,12 +418,8 @@ export default class Maplibre {
     return changed;
   }
 
-  /* Update map style to match props
-     @param {object} nextProps
-     @param {object} currProps
-     @returns {bool} true if style is changed
-   */
-  private _updateStyle(nextProps: MaplibreProps, currProps: MaplibreProps): boolean {
+  /* Update map style to match props */
+  private _updateStyle(nextProps: MaplibreProps, currProps: MaplibreProps): void {
     if (nextProps.cursor !== currProps.cursor) {
       this._map.getCanvas().style.cursor = nextProps.cursor || '';
     }
@@ -419,57 +433,53 @@ export default class Maplibre {
         options.localIdeographFontFamily = nextProps.localIdeographFontFamily;
       }
       this._map.setStyle(normalizeStyle(mapStyle), options);
-      return true;
     }
-    return false;
   }
 
-  /* Update fog, light and terrain to match props
-     @param {object} nextProps
-     @param {object} currProps
-     @returns {bool} true if anything is changed
+  /* Update fog, light, projection and terrain to match props
+   * These props are special because
+   * 1. They can not be applied right away. Certain conditions (style loaded, source loaded, etc.) must be met
+   * 2. They can be overwritten by mapStyle
    */
-  private _updateStyleComponents(nextProps: MaplibreProps, currProps: MaplibreProps): boolean {
+  private _updateStyleComponents({light, projection, sky, terrain}: MaplibreProps): void {
     const map = this._map;
-    let changed = false;
+    const currProps = this._styleComponents;
     // We can safely manipulate map style once it's loaded
     if (map.style._loaded) {
-      if ('light' in nextProps && !deepEqual(nextProps.light, currProps.light)) {
-        changed = true;
-        map.setLight(nextProps.light);
+      if (light && !deepEqual(light, currProps.light)) {
+        currProps.light = light;
+        map.setLight(light);
       }
-      if ('projection' in nextProps && !deepEqual(nextProps.projection, currProps.projection)) {
-        changed = true;
+      if (
+        projection &&
+        !deepEqual(projection, currProps.projection) &&
+        // @ts-expect-error currProps.projection may be a string
+        projection !== currProps.projection?.type
+      ) {
+        currProps.projection = projection;
         // @ts-ignore setProjection does not exist in v4
-        map.setProjection?.({type: nextProps.projection});
+        map.setProjection?.(typeof projection === 'string' ? {type: projection} : projection);
       }
-      if ('sky' in nextProps && !deepEqual(nextProps.sky, currProps.sky)) {
-        changed = true;
-        map.setSky(nextProps.sky);
+      if (sky && !deepEqual(sky, currProps.sky)) {
+        currProps.sky = sky;
+        map.setSky(sky);
       }
-      if ('terrain' in nextProps && !deepEqual(nextProps.terrain, currProps.terrain)) {
-        if (!nextProps.terrain || map.getSource(nextProps.terrain.source)) {
-          changed = true;
-          map.setTerrain(nextProps.terrain);
+      if (terrain !== undefined && !deepEqual(terrain, currProps.terrain)) {
+        if (!terrain || map.getSource(terrain.source)) {
+          currProps.terrain = terrain;
+          map.setTerrain(terrain);
         }
       }
     }
-    return changed;
   }
 
-  /* Update interaction handlers to match props
-     @param {object} nextProps
-     @param {object} currProps
-     @returns {bool} true if anything is changed
-   */
-  private _updateHandlers(nextProps: MaplibreProps, currProps: MaplibreProps): boolean {
+  /* Update interaction handlers to match props */
+  private _updateHandlers(nextProps: MaplibreProps, currProps: MaplibreProps): void {
     const map = this._map;
-    let changed = false;
     for (const propName of handlerNames) {
       const newValue = nextProps[propName] ?? true;
       const oldValue = currProps[propName] ?? true;
       if (!deepEqual(newValue, oldValue)) {
-        changed = true;
         if (newValue) {
           map[propName].enable(newValue);
         } else {
@@ -477,7 +487,6 @@ export default class Maplibre {
         }
       }
     }
-    return changed;
   }
 
   private _onEvent = (e: MapEvent) => {
