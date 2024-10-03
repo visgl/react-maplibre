@@ -4,7 +4,7 @@ React component that wraps the base library's [ScaleControl](https://maplibre.or
 
 ```tsx
 import * as React from 'react';
-import Map, {ScaleControl} from '@vis.gl/react-maplibre';
+import {Map, ScaleControl} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {

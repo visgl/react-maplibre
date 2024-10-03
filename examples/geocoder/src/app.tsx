@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {createRoot} from 'react-dom/client';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 import GeocoderControl from './geocoder-control';
 import ControlPanel from './control-panel';

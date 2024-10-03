@@ -27,7 +27,7 @@ const skipMethods = [
 
 export type MapRef = {
   getMap(): MapInstance;
-} & Omit<MapInstance, typeof skipMethods[number]>;
+} & Omit<MapInstance, (typeof skipMethods)[number]>;
 
 export default function createRef(mapInstance: Maplibre): MapRef | null {
   if (!mapInstance) {

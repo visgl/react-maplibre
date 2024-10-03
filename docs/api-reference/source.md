@@ -5,7 +5,7 @@ This component allows apps to create a [map source](https://maplibre.org/maplibr
 
 ```tsx
 import * as React from 'react';
-import Map, {Source, Layer} from '@vis.gl/react-maplibre';
+import {Map, Source, Layer} from '@vis.gl/react-maplibre';
 import type {CircleLayer} from '@vis.gl/react-maplibre';
 import type {FeatureCollection} from 'geojson';
 

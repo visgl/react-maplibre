@@ -5,7 +5,7 @@ React component that wraps the base library's [NavigationControl](https://maplib
 
 ```tsx
 import * as React from 'react';
-import Map, {NavigationControl} from '@vis.gl/react-maplibre';
+import {Map, NavigationControl} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {

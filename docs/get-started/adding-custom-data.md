@@ -6,7 +6,7 @@ You can inject data and Maplibre native layers using the [Source](../api-referen
 
 ```tsx
 import * as React from 'react';
-import Map, {Source, Layer} from '@vis.gl/react-maplibre';
+import {Map, Source, Layer} from '@vis.gl/react-maplibre';
 import type {CircleLayer} from '@vis.gl/react-maplibre';
 import type {FeatureCollection} from 'geojson';
 

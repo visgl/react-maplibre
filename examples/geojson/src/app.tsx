@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useEffect, useMemo, useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map, {Source, Layer} from '@vis.gl/react-maplibre';
+import {Map, Source, Layer} from '@vis.gl/react-maplibre';
 import ControlPanel from './control-panel';
 
 import {dataLayer} from './map-style';

@@ -4,7 +4,18 @@ export * from './events';
 export * from './style-spec';
 
 // Internal types
-import type {LngLat, PaddingOptions} from 'maplibre-gl';
+import type {
+  LngLat,
+  PaddingOptions,
+  GeoJSONSource as GeoJSONSourceImplementation,
+  ImageSource as ImageSourceImplemtation,
+  CanvasSource as CanvasSourceImplemtation,
+  VectorTileSource as VectorSourceImplementation,
+  RasterTileSource as RasterSourceImplementation,
+  RasterDEMTileSource as RasterDemSourceImplementation,
+  VideoSource as VideoSourceImplementation,
+  Source
+} from 'maplibre-gl';
 
 /**
  * maplibre's Transform interface / CameraUpdateTransformFunction argument
@@ -17,17 +28,6 @@ export type TransformLike = {
   elevation: number;
   padding: PaddingOptions;
 };
-
-import type {
-  GeoJSONSource as GeoJSONSourceImplementation,
-  ImageSource as ImageSourceImplemtation,
-  CanvasSource as CanvasSourceImplemtation,
-  VectorTileSource as VectorSourceImplementation,
-  RasterTileSource as RasterSourceImplementation,
-  RasterDEMTileSource as RasterDemSourceImplementation,
-  VideoSource as VideoSourceImplementation,
-  Source
-} from 'maplibre-gl';
 
 export type {
   GeoJSONSourceImplementation,

@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {useState, useCallback, useMemo} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 import ControlPanel, {Mode} from './control-panel';
 

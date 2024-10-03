@@ -6,7 +6,7 @@ React component that wraps the base library's [Popup](https://maplibre.org/mapli
 ```tsx
 import * as React from 'react';
 import {useState} from 'react';
-import Map, {Popup} from '@vis.gl/react-maplibre';
+import {Map, Popup} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {
@@ -98,7 +98,7 @@ You may use it to call any imperative methods:
 ```tsx
 import * as React from 'react';
 import {useRef, useEffect} from 'react';
-import Map, {Popup} from '@vis.gl/react-maplibre';
+import {Map, Popup} from '@vis.gl/react-maplibre';
 import maplibregl from 'maplibre-gl';
 
 function App() {

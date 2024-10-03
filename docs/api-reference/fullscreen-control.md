@@ -5,7 +5,7 @@ React component that wraps the base library's [FullscreenControl](https://maplib
 
 ```tsx
 import * as React from 'react';
-import Map, {FullscreenControl} from '@vis.gl/react-maplibre';
+import {Map, FullscreenControl} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {

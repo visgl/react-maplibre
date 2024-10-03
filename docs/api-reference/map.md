@@ -4,7 +4,7 @@ React component that wraps the base library's [Map](https://maplibre.org/maplibr
 
 ```tsx title="app.tsx"
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {
@@ -443,7 +443,7 @@ By module import (and embedding in the final bundle):
 
 ```tsx
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import maplibregl from 'maplibre-gl';
 
 function App() {
@@ -455,7 +455,7 @@ By dynamic import (thus enable bundle splitting):
 
 ```tsx
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 function App() {
   return <Map mapLib={import('maplibre-gl')} />;
@@ -470,7 +470,7 @@ Or to load a pre-bundled version of the library:
 
 ```tsx title="app.tsx"
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 function App() {
   return <Map mapLib={window.maplibregl} />;
@@ -522,7 +522,7 @@ Imperative methods are accessible via a [React ref](https://reactjs.org/docs/ref
 ```tsx
 import * as React from 'react';
 import {useRef, useCallback} from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import type {MapRef} from '@vis.gl/react-maplibre';
 
 function App() {

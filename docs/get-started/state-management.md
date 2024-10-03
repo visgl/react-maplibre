@@ -12,7 +12,7 @@ You may clone a full app configuration for this example [here](https://github.co
 
 ```tsx
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 function App() {
   return <Map
@@ -32,7 +32,7 @@ You may clone a full app configuration for this example [here](https://github.co
 
 ```tsx
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 function App() {
   const [viewState, setViewState] = React.useState({
@@ -61,7 +61,7 @@ A real-world application likely uses more complicated state flows:
 
 ```tsx
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 // npm install @turf/turf
 import * as turf from '@turf/turf';

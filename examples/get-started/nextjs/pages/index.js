@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
-import Map, {Marker} from '@vis.gl/react-maplibre';
+import {Map, Marker} from '@vis.gl/react-maplibre';
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 

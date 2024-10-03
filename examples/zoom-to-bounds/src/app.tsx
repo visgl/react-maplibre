@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useRef} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import bbox from '@turf/bbox';
 
 import ControlPanel from './control-panel';

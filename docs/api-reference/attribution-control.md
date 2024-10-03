@@ -5,7 +5,7 @@ React component that wraps the base library's [AttributionControl](https://mapli
 
 ```tsx
 import * as React from 'react';
-import Map, {AttributionControl} from '@vis.gl/react-maplibre';
+import {Map, AttributionControl} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {

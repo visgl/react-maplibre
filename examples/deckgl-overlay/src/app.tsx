@@ -3,9 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {ArcLayer} from '@deck.gl/layers';
 import {DeckProps, PickingInfo} from '@deck.gl/core';
 import {MapboxOverlay} from '@deck.gl/mapbox';
-import {useControl} from '@vis.gl/react-maplibre';
-
-import Map, {NavigationControl} from '@vis.gl/react-maplibre';
+import {Map, useControl, NavigationControl} from '@vis.gl/react-maplibre';
 
 const initialViewState = {
   latitude: 37.78,

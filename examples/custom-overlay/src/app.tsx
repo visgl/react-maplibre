@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useMemo, useState} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import {arc, pie} from 'd3-shape';
 
 import CustomOverlay from './custom-overlay';

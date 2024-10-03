@@ -27,7 +27,7 @@ npm install @vis.gl/react-maplibre maplibre-gl
 
 ```js
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {

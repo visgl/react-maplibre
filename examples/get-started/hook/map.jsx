@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 import 'maplibre-gl/dist/maplibre-gl.css';
 

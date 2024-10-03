@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useMemo, useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map, {Popup, Source, Layer} from '@vis.gl/react-maplibre';
+import {Map, Popup, Source, Layer} from '@vis.gl/react-maplibre';
 import ControlPanel from './control-panel';
 import {countiesLayer, highlightLayer} from './map-style';
 import type {ExpressionSpecification} from 'maplibre-gl';

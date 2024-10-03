@@ -5,7 +5,7 @@ React component that wraps the base library's [Marker](https://maplibre.org/mapl
 
 ```tsx
 import * as React from 'react';
-import Map, {Marker} from '@vis.gl/react-maplibre';
+import {Map, Marker} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {
@@ -121,7 +121,7 @@ You may use it to call any imperative methods:
 ```tsx
 import * as React from 'react';
 import {useRef, useMemo, useCallback} from 'react';
-import Map, {Marker} from '@vis.gl/react-maplibre';
+import {Map, Marker} from '@vis.gl/react-maplibre';
 import maplibregl from 'maplibre-gl';
 
 function App() {

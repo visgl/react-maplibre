@@ -5,7 +5,7 @@ This component allows apps to create a [map layer](https://maplibre.org/maplibre
 
 ```tsx
 import * as React from 'react';
-import Map, {Layer} from '@vis.gl/react-maplibre';
+import {Map, Layer} from '@vis.gl/react-maplibre';
 import type {FillLayer} from '@vis.gl/react-maplibre';
 
 const parkLayer: FillLayer = {

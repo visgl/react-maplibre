@@ -17,12 +17,12 @@ export type MapContextValue = {
 
 export const MapContext = React.createContext<MapContextValue>(null);
 
-type MapInitOptions<MapOptions> = Omit<
+type MapInitOptions = Omit<
   MapOptions,
   'style' | 'container' | 'bounds' | 'fitBoundsOptions' | 'center'
 >;
 
-export type MapProps = MapInitOptions<MapOptions> &
+export type MapProps = MapInitOptions &
   MaplibreProps &
   GlobalSettings & {
     mapLib?: MapLib | Promise<MapLib>;

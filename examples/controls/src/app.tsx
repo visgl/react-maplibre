@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {useState, useMemo} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map, {
+import {
+  Map,
   Marker,
   Popup,
   NavigationControl,

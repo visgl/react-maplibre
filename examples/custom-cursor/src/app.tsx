@@ -2,7 +2,7 @@
 import * as React from 'react';
 import {useState, useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map, {MapStyle} from '@vis.gl/react-maplibre';
+import {Map, MapStyle} from '@vis.gl/react-maplibre';
 import ControlPanel from './control-panel';
 import MAP_STYLE from '../../map-style-basic-v8.json';
 

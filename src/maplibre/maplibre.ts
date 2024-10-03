@@ -551,7 +551,7 @@ export default class Maplibre {
     }
   }
 
-  private _onPointerEvent = (e: MapMouseEvent | MapMouseEvent) => {
+  private _onPointerEvent = (e: MapMouseEvent) => {
     if (e.type === 'mousemove' || e.type === 'mouseout') {
       this._updateHover(e);
     }

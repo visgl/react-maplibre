@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState, useCallback} from 'react';
 import {createRoot} from 'react-dom/client';
-import Map, {Marker, NavigationControl} from '@vis.gl/react-maplibre';
+import {Map, Marker, NavigationControl} from '@vis.gl/react-maplibre';
 
 import ControlPanel from './control-panel';
 import Pin from './pin';

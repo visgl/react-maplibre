@@ -1,8 +1,8 @@
 /* global window, document, FontFace */
 import test from 'tape-promise/tape';
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
 import {createRoot} from 'react-dom/client';
+import {Map} from '@vis.gl/react-maplibre';
 
 import TEST_CASES from './test-cases';
 

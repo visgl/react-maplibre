@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useState} from 'react';
 import {render} from 'react-dom';
-import Map, {MapProps} from '@vis.gl/react-maplibre';
+import {Map, MapProps} from '@vis.gl/react-maplibre';
 
 const CONFIGS: MapProps[] = [
   {

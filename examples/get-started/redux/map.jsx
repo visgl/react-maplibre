@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Map from '@vis.gl/react-maplibre';
+import {Map} from '@vis.gl/react-maplibre';
 
 import {useCallback} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
