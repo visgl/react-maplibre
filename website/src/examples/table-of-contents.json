@@ -1,0 +1,19 @@
+[
+  "index",
+  "clusters",
+  "controls",
+  "custom-cursor",
+  "draggable-markers",
+  "draw-polygon",
+  "filter",
+  "geocoder",
+  "geojson-animation",
+  "geojson",
+  "heatmap",
+  "interaction",
+  "layers",
+  "side-by-side",
+  "terrain",
+  "viewport-animation",
+  "zoom-to-bounds"
+]

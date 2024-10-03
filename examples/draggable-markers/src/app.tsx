@@ -56,7 +56,7 @@ export default function App() {
           <Pin size={20} />
         </Marker>
 
-        <NavigationControl />
+        <NavigationControl position="top-left" />
       </Map>
       <ControlPanel events={events} />
     </>

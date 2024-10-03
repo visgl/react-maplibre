@@ -5,6 +5,8 @@ import {Map} from '@vis.gl/react-maplibre';
 import GeocoderControl from './geocoder-control';
 import ControlPanel from './control-panel';
 
+import '@maplibre/maplibre-gl-geocoder/dist/maplibre-gl-geocoder.css';
+
 export default function App() {
   return (
     <>

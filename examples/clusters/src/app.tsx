@@ -14,6 +14,9 @@ export default function App() {
 
   const onClick = async (event: MapMouseEvent) => {
     const feature = event.features[0];
+    if (!feature) {
+      return;
+    }
     const clusterId = feature.properties.cluster_id;
 
     const geojsonSource: GeoJSONSource = mapRef.current.getSource('earthquakes');

@@ -71,9 +71,9 @@ The hook creates an [IControl](https://maplibre.org/maplibre-gl-js/docs/API/inte
 
 Parameters:
 
-- `onCreate`: ({map: MapRef, mapLib: maplibregl}) => [IControl](./types.md#icontrol) - called to create an instance of the control.
-- `onAdd`: ({map: MapRef, mapLib: maplibregl}) => void - called when the control has been added to the map.
-- `onRemove`: ({map: MapRef, mapLib: maplibregl}) => void - called when the control is about to be removed from the map.
+- `onCreate`: `({map: MapRef, mapLib: maplibregl}) => IControl` - called to create an instance of the control.
+- `onAdd`: `({map: MapRef, mapLib: maplibregl}) => void` - called when the control has been added to the map.
+- `onRemove`: `({map: MapRef, mapLib: maplibregl}) => void` - called when the control is about to be removed from the map.
 - `options`: object
   + `position`: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' - control position relative to the map
 

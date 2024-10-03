@@ -2,7 +2,7 @@
 
 React component that wraps the base library's [Map](https://maplibre.org/maplibre-gl-js/docs/API/classes/Map/) class. This is also the default export from `@vis.gl/react-maplibre`.
 
-```tsx title="app.tsx"
+```tsx
 import * as React from 'react';
 import {Map} from '@vis.gl/react-maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -79,10 +79,10 @@ Default: `true`
 
 Enable diffing when `mapStyle` changes. If `false`, force a 'full' update, removing the current style and building the given one instead of attempting a diff-based update.
 
-#### `terrain`: [Terrain](./types.md#terrain) {#terrain}
+#### `terrain`: [Terrain](./types.md#terrain)|null {#terrain}
 
 Terrain property of the style. Must conform to the [Terrain Style Specification](https://maplibre.org/maplibre-style-spec/terrain/).
-If `undefined` is provided, removes terrain from the map.
+If `null` is provided, removes terrain from the map.
 
 
 ### Camera options

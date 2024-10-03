@@ -154,7 +154,7 @@ A [GeoJSON](http://geojson.org/) feature that also contains the following librar
 - `layer`: Layer
 - `source`: string
 - `sourceLayer`: string
-- `state`: { [key: string]: any }
+- `state`: `{ [key: string]: any }`
 
 #### ViewState
 

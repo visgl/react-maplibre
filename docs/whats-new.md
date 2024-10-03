@@ -1,10 +1,10 @@
 # What's new
 
-## react-maplibre-gl v1.0
+## react-maplibre v1.0
 
 Release target: October 2024
 
-This is the initial release of `react-maplibre-gl`. The code base was spinned off from [react-map-gl v7.1](https://github.com/visgl/react-map-gl/tree/7.1-release). This version is intended to be a drop-in replacement of `react-map-gl` v7.
+This is the initial release of `@vis.gl/react-maplibre`. The code base was spinned off from [react-map-gl v7.1](https://github.com/visgl/react-map-gl/tree/7.1-release). This version is intended to be a drop-in replacement of `react-map-gl` v7.
 
 Major differences are listed below.
 

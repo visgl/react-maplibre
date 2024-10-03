@@ -1,5 +1,5 @@
 import React from 'react';
-import {Home} from '../components';
+import {Home} from '@vis.gl/docusaurus-website/components';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styled from 'styled-components';
 import Layout from '@theme/Layout';
@@ -53,46 +53,43 @@ export default function IndexPage() {
 
   return (
     <Layout title="Home" description="react-map-gl">
-      <Home HeroExample={HeroExample}>
-        <div style={{position: 'relative'}}>
-          <TextContainer>
-            <h2>
-              react-map-gl makes using Mapbox GL JS in React applications easy.
-            </h2>
-            <hr className="short" />
+      <Home theme="dark" HeroExample={HeroExample} getStartedLink="./docs/get-started" />
+      <TextContainer>
+        <h2>
+          react-map-gl makes using Mapbox GL JS in React applications easy.
+        </h2>
+        <hr className="short" />
 
-            <h3>
-              <img src={`${baseUrl}images/icon-react.svg`} />
-              React Integration
-            </h3>
-            <p>
-              Use Mapbox GL JS Map as a fully controlled reactive component.
-            </p>
+        <h3>
+          <img src={`${baseUrl}images/icon-react.svg`} />
+          React Integration
+        </h3>
+        <p>
+          Use Maplibre GL JS Map as a fully controlled reactive component.
+        </p>
 
-            <h3>
-              <img src={`${baseUrl}images/icon-layers.svg`} />
-              Extensible
-            </h3>
-            <p>
-              Comes with additional React interfaces such as context and hooks
-              to support custom components.
-            </p>
+        <h3>
+          <img src={`${baseUrl}images/icon-layers.svg`} />
+          Extensible
+        </h3>
+        <p>
+          Comes with additional React interfaces such as context and hooks
+          to support custom components.
+        </p>
 
-            <h3>
-              <img src={`${baseUrl}images/icon-high-precision.svg`} />
-              Part of vis.gl's Framework Suite
-            </h3>
-            <p>
-              Use together with e.g. <a
-                href="https://deck.gl/"
-                target="_blank"
-                rel="noopener noreferrer">
-                deck.gl</a> to render performant and compelling 2D and 3D
-                WebGL visualizations on top of your Mapbox GL JS based maps.
-            </p>
-          </TextContainer>
-        </div>
-      </Home>
+        <h3>
+          <img src={`${baseUrl}images/icon-high-precision.svg`} />
+          Part of vis.gl's Framework Suite
+        </h3>
+        <p>
+          Use together with e.g. <a
+            href="https://deck.gl/"
+            target="_blank"
+            rel="noopener noreferrer">
+            deck.gl</a> to render performant and compelling 2D and 3D
+            WebGL visualizations on top of your Mapbox GL JS based maps.
+        </p>
+      </TextContainer>
     </Layout>
   );
 }

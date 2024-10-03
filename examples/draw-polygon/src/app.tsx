@@ -6,6 +6,8 @@ import {Map} from '@vis.gl/react-maplibre';
 import DrawControl from './draw-control';
 import ControlPanel from './control-panel';
 
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+
 export default function App() {
   const [features, setFeatures] = useState({});
 
