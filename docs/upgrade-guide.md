@@ -6,7 +6,7 @@
 
 ```patch
 - import {Map, Marker} from 'react-map-gl/maplibre';
-+ import {Map, Marker} from 'react-maplibre-gl';
++ import {Map, Marker} from '@vis.gl/react-maplibre';
 ```
 
 The following Mapbox-only props from `react-map-gl`'s Map component are removed:

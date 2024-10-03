@@ -7,8 +7,8 @@ body:
   attributes:
     value: |
       Thank you for taking the time to report a bug!
-      You may find answers faster by searching in [the documentation](https://visgl.github.io/react-maplibre-gl/search) and [existing issues](https://github.com/visgl/react-maplibre-gl/issue).
-      If you are unsure whether it is a bug in your own implementation or the library itself, consider starting a conversation in [Discussions](https://github.com/visgl/react-maplibre-gl/discussions) instead.
+      You may find answers faster by searching in [the documentation](https://visgl.github.io/react-maplibre/search) and [existing issues](https://github.com/visgl/react-maplibre/issue).
+      If you are unsure whether it is a bug in your own implementation or the library itself, consider starting a conversation in [Discussions](https://github.com/visgl/react-maplibre/discussions) instead.
 - type: textarea
   attributes:
     label: Description
@@ -33,7 +33,7 @@ body:
     label: Environment
     description: |
       Example:
-        - **Framework version**: react-maplibre-gl@7.0.0
+        - **Framework version**: @vis.gl/react-maplibre@1.0.0
         - **Map library**: maplibre-gl@4.7.0
         - **Browser**: Chrome 129.0
         - **OS**: iOS 16.1

@@ -6,7 +6,7 @@ body:
 - type: markdown
   attributes:
     value: |
-      Tell us what you are using react-maplibre-gl for and how we can make it better.
+      Tell us what you are using react-maplibre for and how we can make it better.
       This project is maintained by volunteers and sponsoring companies. While we cannot promise a timeline for any specific feature, we try to prioritize those that will benefit the most users.
 - type: textarea
   attributes:
