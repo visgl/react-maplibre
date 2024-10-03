@@ -30,14 +30,13 @@
     "README.md"
   ],
   "scripts": {
+    "bootstrap": "yarn && ocular-bootstrap && npm run build",
     "typecheck": "tsc -p tsconfig.build.json --noEmit",
-    "bootstrap": "PUPPETEER_SKIP_DOWNLOAD=true yarn && ocular-bootstrap",
     "build": "ocular-clean && ocular-build",
     "lint": "ocular-lint",
-    "cover": "ocular-test cover",
-    "publish-prod": "ocular-publish prod",
-    "publish-beta": "ocular-publish beta",
-    "test": "yarn typecheck && ocular-test",
+    "publish-beta": "ocular-publish version-only-beta",
+    "publish-prod": "ocular-publish version-only-prod",
+    "test": "ocular-test",
     "test-fast": "yarn typecheck && ocular-test node",
     "metrics": "ocular-metrics",
     "update-release-branch": "scripts/update-release-branch.sh"
@@ -62,6 +61,10 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^5.0.0"
+  },
+  "volta": {
+    "node": "20.15.1",
+    "yarn": "4.4.1"
   },
   "pre-commit": [
     "test-fast"
