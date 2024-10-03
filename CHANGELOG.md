@@ -2,6 +2,10 @@
 
 # Version 1.0
 
+## v1.0.0-alpha.4 (Oct 3, 2024)
+
+- Improve projection/terrain prop handling
+
 ## v1.0.0-alpha.3 (Oct 2, 2024)
 
 - Fix for globe projection
