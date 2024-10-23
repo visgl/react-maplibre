@@ -5,12 +5,12 @@ import assert from '../utils/assert';
 import {deepEqual} from '../utils/deep-equal';
 
 import type {
-  MapInstance,
   GeoJSONSourceImplementation,
   ImageSourceImplemtation,
-  AnySource,
   AnySourceImplementation
-} from '../types';
+} from '../types/internal';
+import type {AnySource} from '../types/style-spec';
+import type {MapInstance} from '../types/lib';
 
 export type SourceProps = AnySource & {
   id?: string;

@@ -1,5 +1,6 @@
 import type {MaplibreProps} from '../maplibre/maplibre';
-import type {TransformLike, ViewState} from '../types';
+import type {ViewState} from '../types/common';
+import type {TransformLike} from '../types/internal';
 import {deepEqual} from './deep-equal';
 
 /**

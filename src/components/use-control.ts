@@ -1,5 +1,5 @@
 import {useContext, useMemo, useEffect} from 'react';
-import type {IControl, ControlPosition} from '../types';
+import type {IControl, ControlPosition} from '../types/lib';
 import {MapContext} from './map';
 import type {MapContextValue} from './map';
 

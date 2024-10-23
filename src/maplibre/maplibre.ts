@@ -2,27 +2,25 @@ import {transformToViewState, applyViewStateToTransform} from '../utils/transfor
 import {normalizeStyle} from '../utils/style-utils';
 import {deepEqual} from '../utils/deep-equal';
 
+import type {TransformLike} from '../types/internal';
 import type {
-  TransformLike,
   ViewState,
-  ViewStateChangeEvent,
   Point,
   PointLike,
   PaddingOptions,
-  MapStyle,
   ImmutableLike,
   LngLatBoundsLike,
+  MapGeoJSONFeature
+} from '../types/common';
+import type {MapStyle, Sky, Light, Terrain, Projection} from '../types/style-spec';
+import type {MapInstance} from '../types/lib';
+import type {
   MapCallbacks,
-  Sky,
-  Light,
-  Terrain,
-  Projection,
+  ViewStateChangeEvent,
   MapEvent,
   ErrorEvent,
-  MapMouseEvent,
-  MapGeoJSONFeature,
-  MapInstance
-} from '../types';
+  MapMouseEvent
+} from '../types/events';
 
 export type MaplibreProps = Partial<ViewState> &
   MapCallbacks & {

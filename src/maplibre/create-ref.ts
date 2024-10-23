@@ -1,4 +1,4 @@
-import type {MapInstance} from '../types';
+import type {MapInstance} from '../types/lib';
 import type Maplibre from './maplibre';
 
 /** These methods may break the react binding if called directly */

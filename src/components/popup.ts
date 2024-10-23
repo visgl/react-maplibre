@@ -4,7 +4,8 @@ import {createPortal} from 'react-dom';
 import {useImperativeHandle, useEffect, useMemo, useRef, useContext, forwardRef, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 
-import type {PopupEvent, PopupInstance, PopupOptions} from '../types';
+import type {PopupInstance, PopupOptions} from '../types/lib';
+import type {PopupEvent} from '../types/events';
 
 import {MapContext} from './map';
 import {deepEqual} from '../utils/deep-equal';

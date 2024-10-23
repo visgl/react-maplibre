@@ -1,8 +1,3 @@
-export * from './common';
-export * from './lib';
-export * from './events';
-export * from './style-spec';
-
 // Internal types
 import type {
   LngLat,

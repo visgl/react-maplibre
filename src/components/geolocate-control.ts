@@ -6,11 +6,9 @@ import {useControl} from './use-control';
 import type {
   ControlPosition,
   GeolocateControlInstance,
-  GeolocateControlOptions,
-  GeolocateEvent,
-  GeolocateResultEvent,
-  GeolocateErrorEvent
-} from '../types';
+  GeolocateControlOptions
+} from '../types/lib';
+import type {GeolocateEvent, GeolocateResultEvent, GeolocateErrorEvent} from '../types/events';
 
 export type GeolocateControlProps = GeolocateControlOptions & {
   /** Placement of the control relative to the map. */

@@ -4,13 +4,8 @@ import {createPortal} from 'react-dom';
 import {useImperativeHandle, useEffect, useMemo, useRef, useContext, forwardRef, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 
-import type {
-  MarkerEvent,
-  MarkerDragEvent,
-  PopupInstance,
-  MarkerInstance,
-  MarkerOptions
-} from '../types';
+import type {PopupInstance, MarkerInstance, MarkerOptions} from '../types/lib';
+import type {MarkerEvent, MarkerDragEvent} from '../types/events';
 
 import {MapContext} from './map';
 import {arePointsEqual} from '../utils/deep-equal';

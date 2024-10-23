@@ -3,7 +3,8 @@ import {MapContext} from './map';
 import assert from '../utils/assert';
 import {deepEqual} from '../utils/deep-equal';
 
-import type {MapInstance, CustomLayerInterface, AnyLayer} from '../types';
+import type {MapInstance, CustomLayerInterface} from '../types/lib';
+import type {AnyLayer} from '../types/style-spec';
 
 // Omiting property from a union type, see
 // https://github.com/microsoft/TypeScript/issues/39556#issuecomment-656925230

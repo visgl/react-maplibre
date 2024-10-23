@@ -3,7 +3,8 @@ import {useEffect, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 import {useControl} from './use-control';
 
-import type {ControlPosition, Terrain} from '../types';
+import type {ControlPosition} from '../types/lib';
+import type {Terrain} from '../types/style-spec';
 
 export type TerrainControlProps = Terrain & {
   /** Placement of the control relative to the map. */

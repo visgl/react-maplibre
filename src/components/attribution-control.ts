@@ -3,7 +3,7 @@ import {useEffect, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 import {useControl} from './use-control';
 
-import type {ControlPosition, AttributionControlOptions} from '../types';
+import type {ControlPosition, AttributionControlOptions} from '../types/lib';
 
 export type AttributionControlProps = AttributionControlOptions & {
   /** Placement of the control relative to the map. */

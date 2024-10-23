@@ -8,7 +8,7 @@ import createRef, {MapRef} from '../maplibre/create-ref';
 import type {CSSProperties} from 'react';
 import useIsomorphicLayoutEffect from '../utils/use-isomorphic-layout-effect';
 import setGlobals, {GlobalSettings} from '../utils/set-globals';
-import type {MapLib, MapOptions} from '../types';
+import type {MapLib, MapOptions} from '../types/lib';
 
 export type MapContextValue = {
   mapLib: MapLib;

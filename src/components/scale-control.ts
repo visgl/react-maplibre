@@ -3,7 +3,7 @@ import {useEffect, useRef, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 import {useControl} from './use-control';
 
-import type {ControlPosition, ScaleControlOptions} from '../types';
+import type {ControlPosition, ScaleControlOptions} from '../types/lib';
 
 export type ScaleControlProps = ScaleControlOptions & {
   // These props will be further constraint by OptionsT

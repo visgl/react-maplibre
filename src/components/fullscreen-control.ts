@@ -4,7 +4,7 @@ import {useEffect, memo} from 'react';
 import {applyReactStyle} from '../utils/apply-react-style';
 import {useControl} from './use-control';
 
-import type {ControlPosition, FullscreenControlOptions} from '../types';
+import type {ControlPosition, FullscreenControlOptions} from '../types/lib';
 
 export type FullscreenControlProps = Omit<FullscreenControlOptions, 'container'> & {
   /** Id of the DOM element which should be made full screen. By default, the map container
